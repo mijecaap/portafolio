@@ -1,0 +1,180 @@
+@font-face {
+  font-family: Zero Gothic;
+  src: url("../../../../assets/font/ZeroGothic.otf");
+}
+
+@media (max-width: 599px) {
+  .home-container {
+    padding-top: 56px;
+  }
+}
+
+.bg-home-banner {
+  background-image: url("../../../../assets/img/manga-home-bg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.home-container {
+  padding-top: 64px;
+}
+
+.home-info {
+  background-color: white;
+  border: 3px solid black;
+  padding: 12px 18px;
+}
+
+.home-animation {
+  background-image: url("../../../../assets/img/img-home.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: 3px solid black;
+  padding: 12px 18px;
+  height: 400px;
+  width: 400px;
+  position: relative;
+}
+
+.tic-effect {
+  position: absolute;
+  font-size: 24px;
+  color: white;
+  text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000,
+    1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  animation: shake 0.5s;
+  animation-iteration-count: infinite;
+}
+
+
+
+@mixin animate_bg($posx1, $posy1, $posx2, $posy2, $class, $duration, $id) {
+  $animation-name: unique-id();
+
+  @keyframes #{$animation-name} {
+    0% {
+      transform: translate($posx1, $posy1);
+      opacity: 1;
+    }
+    100% {
+      transform: translate($posx2, $posy2);
+      opacity: 0;
+    }
+  }
+
+  .#{$class}:nth-of-type(#{$id}) {
+    animation-iteration-count: infinite;
+    animation-duration: $duration;
+    animation-name: $animation-name;
+  }
+}
+
+@include animate_bg(40px, 200px, 0px, 0px, container-effect, 2s, 1);
+@include animate_bg(50px, 180px, 0px, 280px, container-effect, 2.5s, 2);
+@include animate_bg(70px, 220px, 200px, 50px, container-effect, 1.8s, 3);
+@include animate_bg(60px, 200px, 200px, 300px, container-effect, 2.2s, 4);
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+
+.typewriter h1 {
+  font-family: "Zero Gothic";
+  overflow: hidden;
+  border-right: 0.105em solid #222222;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+  animation: typing 2s steps(40, end), blink-caret 0.7s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #222222;
+  }
+}
+
+.home-info-title h1 {
+  font-family: "Zero Gothic";
+  text-align: center;
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(151, 151, 151));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+}
+
+/* mouse move gradiant */
+
+// .bg-home-banner div {
+//   position: relative;
+// }
+
+// .bg-home-banner span {
+//   position: relative;
+// }
+
+// .bg-home-banner:before {
+//   --size: 0;
+//   content: "";
+//   position: absolute;
+//   left: var(--x);
+//   top: var(--y);
+//   width: var(--size);
+//   height: var(--size);
+//   background: radial-gradient(circle closest-side, rgb(94, 29, 29), transparent);
+//   transform: translate(-50%, -50%);
+//   transition: width 0.2s ease, height 0.2s ease;
+// }
+
+// .bg-home-banner:hover:before {
+//   --size: 200px;
+// }

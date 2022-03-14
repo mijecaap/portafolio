@@ -1,0 +1,56 @@
+.bg-portfolio-banner {
+  background-image: url("../../../../assets/img/manga-portfolio-bg.jpg");
+  background-position: center;
+  background-repeat: repeat;
+  filter: grayscale(100%);
+  overflow: hidden;
+}
+
+.home-container {
+  padding-top: 64px;
+}
+
+.portfolio-card {
+  height: 332px;
+  width: 238px;
+  background-color: white;
+  padding: 5px;
+  border-radius: 3px;
+  border: 4px solid gray;
+}
+
+.pc-title {
+  width: 100%;
+  height: 10%;
+  margin-bottom: 2px;
+  border: 2px solid black;
+}
+
+.pc-star-image {
+  height: 60%;
+  width: 100%;
+  padding: 0 5px 0 5px;
+}
+
+.stars .star {
+  background-color: red;
+  border-radius: 50%;
+  color: yellow;
+  font-size: 20px;
+  height: 20px;
+  width: 20px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  border: 4px solid gray;
+}
+
+.pc-description {
+  height: 30%;
+  width: 100%;
+  margin-top: px;
+  background-color: red;
+}

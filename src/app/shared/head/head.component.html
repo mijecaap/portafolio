@@ -1,0 +1,49 @@
+<mat-toolbar>
+  <div class="w-100 d-flex justify-content-end">
+    <button
+      class="me-3 btn-headbar"
+      routerLink="/home"
+      routerLinkActive="active-link"
+      #hla="routerLinkActive"
+      [disabled]="hla.isActive"
+    >
+      <span>Home</span>
+    </button>
+    <button
+      class="me-3 btn-headbar"
+      routerLink="/portfolio"
+      routerLinkActive="active-link"
+      #pla="routerLinkActive"
+      [disabled]="pla.isActive"
+    >
+      <span>Portfolio</span>
+    </button>
+    <button
+      class="me-3 btn-headbar"
+      routerLinkActive="active-link"
+      #sla="routerLinkActive"
+      [disabled]="sla.isActive"
+    >
+      <span>Skillsets</span>
+    </button>
+    <button
+      class="me-3 btn-headbar"
+      routerLinkActive="active-link"
+      #ela="routerLinkActive"
+      [disabled]="ela.isActive"
+    >
+      <span>Experience</span>
+    </button>
+    <button
+      class="btn-headbar"
+      routerLinkActive="active-link"
+      #cla="routerLinkActive"
+      [disabled]="cla.isActive"
+    >
+      <span>Contact</span>
+    </button>
+  </div>
+</mat-toolbar>
+<div class="container-modules">
+  <router-outlet></router-outlet>
+</div>

@@ -1,1 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+/* @font-face {
+    font-family: Zero Gothic;
+    src: url(assets/font/ZeroGothic.otf);
+} */
+html,
+body {
+  height: 100%;
+}
+/* * { font-family: 'Rampart One', cursive; } */
+* {
+  font-family: "Reggae One", cursive;
+}
