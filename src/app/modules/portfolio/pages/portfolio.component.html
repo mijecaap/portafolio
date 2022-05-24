@@ -1,19 +1,89 @@
+<!-- <div class="bg-portfolio-banner h-100 w-100">
+  <div
+    class="home-container w-100 h-100 d-flex justify-content-center align-items-center"
+  >
+    <div *ngFor="let p of portfolio" class="col d-flex justify-content-center">
+      <div class="portfolio-card">
+        <div class="pc-title">
+          <div class="title">{{ p.title }}</div>
+        </div>
+        <div class="pc-star-image">
+          <div class="stars d-flex justify-content-end">
+            <mat-icon *ngFor="let s of [].constructor(p.stars)" class="star">
+              star
+            </mat-icon>
+          </div>
+          <div class="image" [style]="p.image"></div>
+        </div>
+        <div class="pc-description d-flex flex-column">
+          <div class="subtitle">
+            {{ p.subtitle }}
+          </div>
+          <div class="description scrollable-container">
+            {{ p.description }}
+          </div>
+          <div class="stats mt-auto d-flex justify-content-end">
+            <span class="me-4">ATK /</span>{{ p.attack }}
+            <span class="ms-2 me-4"> DEF /</span>{{ p.defense }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
 <div class="bg-portfolio-banner h-100 w-100">
   <div class="home-container w-100 h-100">
-    <div class="portfolio-card">
-      <div class="pc-title">
-        <div class="title">Mago Oscuro</div>
-      </div>
-      <div class="pc-star-image">
-        <div class="stars d-flex justify-content-end">
-          <mat-icon class="star">star</mat-icon>
+    <carousel
+      [cellsToShow]="cellsToShow"
+      [loop]="true"
+      [arrows]="arrows"
+      class="w-100 h-100"
+    >
+      <div
+        *ngFor="let p of portfolio"
+        class="carousel-cell col d-flex justify-content-center align-items-center"
+      >
+        <div class="portfolio-card">
+          <div class="pc-title">
+            <div class="title">{{ p.title }}</div>
+          </div>
+          <div class="pc-star-image">
+            <div class="stars d-flex justify-content-end">
+              <mat-icon *ngFor="let s of [].constructor(p.stars)" class="star">
+                star
+              </mat-icon>
+            </div>
+            <div class="image" (click)="show()">
+              <img class="img-bg" [src]="p.urlImage" alt="image" />
+              <img class="img-center" [src]="p.urlImage" alt="image" />
+            </div>
+          </div>
+          <div class="pc-description d-flex flex-column">
+            <div class="subtitle">
+              {{ p.subtitle }}
+            </div>
+            <div class="description scrollable-container">
+              {{ p.description }}
+            </div>
+            <div class="stats mt-auto d-flex justify-content-end">
+              <span class="me-4">ATK /</span>{{ p.attack }}
+              <span class="ms-2 me-4"> DEF /</span>{{ p.defense }}
+            </div>
+          </div>
         </div>
-        <div class="image">
-
-        </div>
       </div>
-      <div class="pc-description">
-
+    </carousel>
+  </div>
+</div>
+<div [style.display]="showModal ? 'block' : 'none'" class="image-modal">
+  <div class="image-modal-container">
+    <div class="image-modal-content">
+      <div class="image-modal-close" (click)="hide()">
+        <mat-icon class="close-icon">close</mat-icon>
+      </div>
+      <div class="image-modal-image">
+        <img [src]="" alt="image" />
       </div>
     </div>
   </div>

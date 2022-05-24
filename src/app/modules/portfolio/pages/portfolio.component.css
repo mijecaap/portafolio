@@ -1,9 +1,18 @@
 .bg-portfolio-banner {
+  position: relative;
+}
+
+.bg-portfolio-banner::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
   background-image: url("../../../../assets/img/manga-portfolio-bg.jpg");
   background-position: center;
   background-repeat: repeat;
   filter: grayscale(100%);
   overflow: hidden;
+  height: 100%;
+  width: 100%;
 }
 
 .home-container {
@@ -11,19 +20,31 @@
 }
 
 .portfolio-card {
-  height: 332px;
-  width: 238px;
-  background-color: white;
+  height: var(--height-card);
+  width: var(--width-card);
+  background-color: #b2932e;
   padding: 5px;
   border-radius: 3px;
-  border: 4px solid gray;
+  border: 4px solid #4b3935;
+  box-shadow: 0 0 50px #8f5922 inset;
+  filter: grayscale(1);
+  transition: filter 0.5s ease;
+  cursor: pointer;
+}
+
+.portfolio-card:hover {
+  filter: grayscale(0);
 }
 
 .pc-title {
   width: 100%;
   height: 10%;
   margin-bottom: 2px;
-  border: 2px solid black;
+  border: 3px outset #6f572c;
+}
+
+.pc-title .title {
+  font-size: calc(0.055 * var(--height-card));
 }
 
 .pc-star-image {
@@ -32,25 +53,134 @@
   padding: 0 5px 0 5px;
 }
 
+.stars {
+  margin-bottom: 2px;
+}
+
 .stars .star {
-  background-color: red;
+  background-color: #9d2a21;
   border-radius: 50%;
-  color: yellow;
+  color: #cdce2f;
   font-size: 20px;
   height: 20px;
   width: 20px;
+  margin-left: 2px;
 }
 
 .image {
   height: 100%;
   width: 100%;
-  background-color: black;
-  border: 4px solid gray;
+  border: 4px groove #5d4f48;
+  position: relative;
+}
+
+.image .img-bg {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover !important;
+  filter: contrast(50%);
+}
+
+.image .img-center {
+  position: absolute !important;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .pc-description {
-  height: 30%;
+  height: calc(30% - 30px);
+  border: 3px solid #93502b;
   width: 100%;
-  margin-top: px;
-  background-color: red;
+  padding: 2px;
+  margin-top: 30px;
+  background-color: #c4c486;
+  box-shadow: 0 0 50px #968f55 inset;
+}
+
+.pc-description .subtitle {
+  width: 100%;
+  height: 20%;
+  font-size: calc(0.03 * var(--height-card));
+  font-weight: bold;
+}
+
+.pc-description .description {
+  width: 100%;
+  height: 60%;
+  font-family: "Arial";
+  font-size: calc(0.025 * var(--height-card));
+  font-style: italic;
+}
+
+.pc-description .stats {
+  width: 100%;
+  height: 20%;
+  font-size: calc(0.03 * var(--height-card));
+  border-top: 1px solid #000;
+  padding-right: 5px;
+}
+
+.image-modal {
+  top: 0;
+  width: 100%;
+  position: absolute;
+  z-index: 99999;
+}
+
+.image-modal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.image-modal-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 1;
+}
+
+.image-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #000;
+  opacity: 0.8;
+  z-index: 2;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+}
+
+.image-modal-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }

@@ -37,6 +37,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 // import { NgxLoadingModule } from 'ngx-loading';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { IvyCarouselModule } from 'angular-responsive-carousel';
 
 
 const materialModules = [
@@ -80,7 +81,8 @@ const materialModules = [
   ReactiveFormsModule,
   MatFormFieldModule,
   MatExpansionModule,
-  MatSlideToggleModule
+  MatSlideToggleModule,
+  IvyCarouselModule,
 ];
 
 @NgModule({

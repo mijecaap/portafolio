@@ -11,3 +11,38 @@ body {
 * {
   font-family: "Reggae One", cursive;
 }
+:root {
+  --height-card: 432px;
+  --width-card: 309px;
+}
+
+.scrollable-container {
+  overflow: auto;
+}
+
+.scrollable-container::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.scrollable-container::-webkit-scrollbar:vertical {
+  width: 6px;
+}
+
+.scrollable-container::-webkit-scrollbar-button:increment,
+.scrollable-container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.scrollable-container::-webkit-scrollbar:horizontal {
+  height: 8px;
+}
+
+.scrollable-container::-webkit-scrollbar-thumb {
+  background-color: #93502b;
+  border-radius: 20px;
+  border: 1px solid #c4c486;
+}
+
+.scrollable-container::-webkit-scrollbar-track {
+  border-radius: 10px;
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "title": "Sistema Hospitalario",
+    "icon": "angular",
+    "stars": 8,
+    "styleImage": "url(../../../../assets/img/portfolio/sistemahospitalario.png)",
+    "urlImage": "../../../../assets/img/portfolio/sistemahospitalario.png",
+    "subtitle": "[ Angular - Firebase ]",
+    "description": "Proyecto universitario realizado con angular y firebase. Es un proyecto web que permite registrar doctores con una foto, asi como registrar paciente y agendarles una visita o internarlos.",
+    "attack": "?",
+    "defense": "?"
+  },
+  {
+    "title": "Sistema de Almacén",
+    "icon": "react",
+    "stars": 7,
+    "styleImage": "background-image: url(../../../../assets/img/portfolio/sistemataller.png)",
+    "urlImage": "../../../../assets/img/portfolio/sistemataller.png",
+    "subtitle": "[ Reactjs - Nextjs - Firebase ]",
+    "description": "Proyecto universitario realizado con Nextjs y Firebase. Es un proyecto web que permite registrar materiales, servicios, personal y clientes, para luego eleborar contratos con el stock correspondiente al tipo de servicio que se escoja.",
+    "attack": "?",
+    "defense": "?"
+  },
+  {
+    "title": "Dados Locos",
+    "icon": "react",
+    "stars": 6,
+    "styleImage": "background-image: url(../../../../assets/img/portfolio/dadoslocos.png)",
+    "urlImage": "../../../../assets/img/portfolio/dadoslocos.png",
+    "subtitle": "[ MERN ]",
+    "description": "Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase",
+    "attack": "?",
+    "defense": "?"
+  },
+  {
+    "title": "Classroom",
+    "icon": "react",
+    "stars": 5,
+    "styleImage": "background-image: url(../../../../assets/img/portfolio/sistemahospitalario.png)",
+    "urlImage": "../../../../assets/img/portfolio/sistemahospitalario.png",
+    "subtitle": "[ Angular - Firebase ]",
+    "description": "Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase Módulo realizado con angular y firebase",
+    "attack": "?",
+    "defense": "?"
+  }
+]
